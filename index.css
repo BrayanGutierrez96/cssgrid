@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/* .contenedor{
+    width: 70%;
+    height: 100vh;
+    border: 1px solid black;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, maxmin(100px,auto));
+    grid-gap: 20px;
+}
+.caja{
+    background-color: antiquewhite;
+    border: 1px solid black;
+    padding: 20px;
+    text-align: center;
+} */
+
+.contenedor {
+  margin: 0 auto;
+  border: 1px solid black;
+  height: 100vh;
+  text-align: center;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas: "header      header      header"
+                        "contain    contain     sidebar"
+                        "contain    contain     sidebar"
+                        "footer     footer      footer";
+}
+
+.caja {
+  border: 1px solid black;
+  display: grid;
+  align-items: center;
+  background-color: rgb(34, 56, 56);
+  column-gap: 20px;
+}
+.header {
+  background-color: #e88b00;
+  grid-area: header;
+  display: grid;
+  grid-template-areas: "logo    nav";
+  grid-template-rows: minmax(100px, auto);
+  box-shadow: 1px 10px 20px 7px rgba(0, 0, 0, 0.123);
+}
+.nav{
+    display: grid;
+    grid-area: nav;
+    justify-content: end;
+    align-items: center;
+}
+ul{
+    padding-right: 100px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 100px;
+}
+
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+.logo{
+    grid-area: logo;
+}
+.imagen{
+    width: 50px;
+}
+.sidebar{
+    grid-area: sidebar;
+    background-color: blue;
+}
+.contain{
+    grid-area: contain;
+    background-color: rgba(255, 0, 0, 0);
+    display: grid;
+}
+.section1{
+    background-color: white;
+    color: black;
+    padding: 50px;
+    display: grid;
+    align-items: center;
+}
+.section2{
+    margin-top: 20px;
+    background-color: white;
+    color: black;
+    padding: 50px;
+    display: grid;
+    align-items: center;
+}
+.footer{
+    grid-area: footer;
+    background-color: rgb(21, 212, 63);
+}

@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  border: 1px solid black;
+  background-image: linear-gradient(
+    180deg,
+    #4f3f66 0,
+    #3b2e5f 25%,
+    #1f1f59 50%,
+    #001253 75%,
+    #00004e 100%
+  );
+  background-attachment: fixed;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+.header__logo {
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.logo__img {
+  color: white;
+  background-color: rgb(216, 236, 36);
+  width: 100%;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.header__nav{
+    width: 40%;
+}
+.nav__container{
+    display: flex;
+    justify-content: space-evenly;
+    height: 50px;
+    align-items: center;
+    color: white;
+    font-family: monospace;
+}
+.container__links-container{
+    list-style-type: none;
+}
+.links-coontainer__link{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+}
+.links-coontainer__link:hover{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.418);
+}
+.main {
+  padding: 250px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  border: 1px solid black;
+}
+.main__about{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 200px;
+    height: 40vh;
+}
+.about__title{
+    font-size: 2em;
+    font-family: monospace;
+    border-bottom: 3px solid black;
+}
+.about__text{
+    text-align: center;
+}
+.main__services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  width: 80%;
+}
+.services__title{
+    margin: 40px;
+    font-size: 2em;
+    font-family: monospace;
+    border-bottom: 3px solid black;
+}
+.services{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+}
+
+.services__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+  gap: 30px;
+  box-shadow: 5px 10px 20px 10px rgba(0, 0, 0, 0.336);
+  animation: animationCard 0.5s linear;
+  cursor: pointer;
+}
+.services__card:hover{
+    scale: 99%;
+}
+.card__img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.img__image{
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.card__title{
+    text-align: center;
+    font-size: 1.5em;
+    font-family: monospace;
+}
+.card__paragraph{
+    padding: 30px;
+    font-size: 0.9em;
+    font-family: monospace;
+}
+.card__btn{
+    display: flex;
+    justify-content: center;
+    padding:0 0 50px 0;
+}
+.btn__send{
+    width: 100px;
+    height: 30px;
+    background-color: #4f3f66;
+    color: white;
+    font-family: monospace;
+    font-size: .8em;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bolder;
+}
+.btn__send:hover{
+    background-color: #000000;
+}
+.footer {
+    background-image: linear-gradient(
+    180deg,
+    #4f3f66 0,
+    #3b2e5f 25%,
+    #1f1f59 50%,
+    #001253 75%,
+    #00004e 100%
+  );
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid black;
+  padding: 50px;
+  color: white;
+}
+.footer__info{
+    height: 0;
+}
+.footer__location{
+    width: 500px;
+    height: 200px;
+}
+.map{
+    width: 100%;
+    user-select: none;
+}
+.text__container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+.container__text{
+    list-style-type: none;
+}
+.media__container{
+    display: flex;
+    gap: 50px;
+}
+.container__media{
+    width: 30px;
+    background-color: white;
+    height: 30px;
+    list-style-type: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.media{
+    width: 100%;
+    height: 100%;
+}
+@media(max-width:1250px){
+    .services{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .main__about{
+        padding: 100px;
+    }
+    .links-coontainer__link{
+        font-size: 1em;
+    }
+}
+@media(max-width:800px){
+    .services{
+        grid-template-columns: 1fr;
+    }
+    .main__about{
+        padding: 50px;
+    }
+    .links-coontainer__link{
+        font-size: .9em;
+    }
+}
+@keyframes animationCard{
+    from{
+        scale: 0;
+    }
+    to{
+        scale: 101%;
+    }
+}
